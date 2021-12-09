@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
   //property
   public totalItem:number=0;
   public searchTerm:string="";
+
   
   constructor(private cartservice:CartService) { }
 
@@ -24,6 +25,11 @@ export class HeaderComponent implements OnInit {
 
   }
   
+  varIsLoggedIn="isLoggedIn";
+  login()
+  {
+    localStorage.setItem(this.varIsLoggedIn,'true')
+  }
   //search the items from products for header 
   search(event:any){
     this.searchTerm=(event.target as HTMLInputElement).value;

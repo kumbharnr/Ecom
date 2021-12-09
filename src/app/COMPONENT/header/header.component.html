@@ -1,22 +1,44 @@
+
 <header>
-    <div class="navbar bg-primary shadow-sm">
+
+    <div class="navbar bg shadow-sm" style="background: rgb(205, 172, 238);">
         <div routerLink="/product" style="cursor: pointer;" class="navbar-brand align-item-center d-flex">
-            <i style="font-size: 40px;" class="fas fa-truck">&nbsp;  
-            </i>
-            <strong style="font-size: 30px;">FKart</strong>
+            <!-- <i style="font-size: 40px;" class="fas fa-truck">&nbsp;  
+            </i> -->
+            <strong style="font-size: 30px;">Shopping</strong>
             <div class="form-group">
                 <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" class="form-control" placeholder="Serch Items">
             </div>
             <span class="fas fa-search search-icon"></span>
 
         </div>
-        <button routerLink="/cart" class="btn btn-primary">
+        <button routerLink="/cart" class="btn btn" style="background: rgb(205, 172, 238);">
             <i style="font-size: 30px;" class="fa fa-shopping-cart"></i>
             <div style="font-size: 10px;" class=" badge bg-danger">{{totalItem}}</div>
         </button>
-        Welcome back
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" style="background: rgb(205, 172, 238);" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Actions
+            </button>
+            <div class="dropdown-menu" style="background: rgb(205, 172, 238);" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" style="cursor: pointer;">
+                    <h6 routerLink="/contact">Contact us</h6>
+                </a>
+                <a class="dropdown-item" style="cursor: pointer;">
+                    <h6 routerLink="/about">about</h6>
+                </a>
+                <a class="dropdown-item" style="cursor: pointer;">
+                    <h6 routerLink="/orders">order</h6>
+                </a>
+                <a *ngIf="varIsLoggedIn" class="dropdown-item" routerLink="/login" style="color: blue;">Login/Reg</a>
+                <a  *ngIf="varIsLoggedIn" class="dropdown-item" routerLink="/login" style="color: red;" >Logout</a>
+            </div>
+          </div>
+    
+        
         <div class="button">
-            <button routerLink="/login" class="btn btn-danger">Logout</button>
+            
         </div>
     </div>
 </header>

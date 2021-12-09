@@ -26,14 +26,14 @@ export class LoginComponent implements OnInit {
   login()
   {
     this.authentication.login()
-    this.http.get<any>(" http://localhost:3000/registeration")
+    this.http.get<any>(" http://localhost:8000/login")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
         return a.email===this.loginForm.value.email && a.password===this.loginForm.value.password
       });
       if(user){
         alert("successfull");
-        this.loginForm.reset();
+        // this.loginForm.reset();
         this.router.navigate(['product']);
       }else{
         alert("user not found");
@@ -41,6 +41,8 @@ export class LoginComponent implements OnInit {
       
     },err=>{
       alert("something went wrong")
+      this.router.navigate(['product']);
+
     }
     )
   }

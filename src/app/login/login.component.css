@@ -260,4 +260,34 @@ html {
   #icon {
     width:60%;
   }
-  
+
+  .container{
+    background: url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
+  }
+
+.main-footer{
+  background: black;
+  padding: 32px;
+  margin-top: 48px;
+
+}
+.main-footer__links{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+.main-footer__link{
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-footer__link a{
+  color: white;
+  text-decoration: none;
+}
+.main-footer__link:hover,
+.main-footer__link:active{
+  color: white;
+}

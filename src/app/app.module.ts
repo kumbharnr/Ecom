@@ -14,6 +14,16 @@ import { RegisterComponent } from './register/register.component';
 import { AddressComponent } from './COMPONENT/address/address.component';
 import { DoneComponent } from './COMPONENT/done/done.component';
 import { OfferZoneComponent } from './COMPONENT/offer-zone/offer-zone.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { OrdersComponent } from './orders/orders.component';
+import { AdminComponent } from './admin/admin.component';
+import { Contacts } from './contact/contacts';
+import { UserOrderListComponent } from './user-order-list/user-order-list.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PaymentConfirmationComponent } from './payment-confirmation/payment-confirmation.component';
+
 
 @NgModule({
   declarations: [
@@ -26,14 +36,22 @@ import { OfferZoneComponent } from './COMPONENT/offer-zone/offer-zone.component'
     RegisterComponent,
     AddressComponent,
     DoneComponent,
-    OfferZoneComponent
+    OfferZoneComponent,
+    ContactComponent,
+    AboutComponent,
+    OrdersComponent,
+    AdminComponent,
+    UserOrderListComponent,
+    ForgotPasswordComponent,
+    PaymentComponent,
+    PaymentConfirmationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     
   ],
   providers: [],

@@ -13,3 +13,16 @@
 .navbar{
     position: relative;
 }
+
+.item{
+    margin: 0px 15px ;
+    text-align: center;
+}
+.item a:hover,.item a::after{
+    /* transform: scale(1.1); */
+    color:green;
+    cursor: pointer;
+}
+.item img:hover,.item img::after{
+    transform: scale(1.1);
+}

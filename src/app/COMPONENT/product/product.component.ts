@@ -9,6 +9,7 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class ProductComponent implements OnInit {
 
+  //properties
   public productList:any;
   searchKey:string='';
   public filterCategory:any

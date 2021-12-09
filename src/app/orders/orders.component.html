@@ -1,0 +1,39 @@
+<div class="col-lg-4 mt-2">
+    <!-- <input  class="form-control" type="number"[(ngModel)]="EMPID"> -->
+    <!-- <input type="button" (click)="getInsuraceById()" value="getByID" class="btn btn-warning"> <br><br> -->
+    
+    </div>
+    
+    <!-- <div *ngIf = "successMsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{successMsg}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div> -->
+    <div class="container mt-5">
+        <table class="table table-success table-striped">
+            <thead>
+              <tr>
+                <th scope="col">full Name</th>
+                <th scope="col">email</th>
+                <th scope="col">orders</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">orderid</th>
+                <!-- <th scope="col">Actions</th> -->
+    
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor = 'let insObj of readData'>
+                <td>{{insObj.fullname}}</td>
+                <td>{{insObj.email}}</td>
+                <td>{{insObj.orders}}</td>
+                <td>{{insObj.mobile}}</td>
+                <td>#{{insObj.orderid}}</td>
+                <!-- <td><i class="fa fa-trash-o" style="font-size:36px;cursor: pointer;color: red;" (click)="deleteID(insObj.Insurance_ID)"></i></td>
+                    <td><a [routerLink]="['/create',insObj.Insurance_ID]" class="fa fa-edit" style="font-size:36px;cursor: pointer;" ></a>
+                </td> -->
+                <!-- <a href="" >delete</a> -->
+                
+              </tr>
+            </tbody>
+          </table>
+    </div>
